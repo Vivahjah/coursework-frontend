@@ -1,7 +1,7 @@
 <script setup>
-const API_URL =
-  import.meta.env.VITE_API_URL ||
-  "https://m01067827-after-school.onrender.com";
+const API_URL = import.meta.env.DEV
+  ? import.meta.env.VITE_API_URL
+  : "https://m01067827-after-school.onrender.com";
 
 defineProps({
     lesson: {
