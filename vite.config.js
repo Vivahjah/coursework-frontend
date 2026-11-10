@@ -1,8 +1,9 @@
 import vue from '@vitejs/plugin-vue'
 import { defineConfig } from 'vite'
 
-// https://vite.dev/config/
 export default defineConfig({
   plugins: [vue()],
-  base: '/coursework-frontend/',
+  base: process.env.NODE_ENV === 'production'
+    ? '/coursework-frontend/'
+    : '/',
 })
