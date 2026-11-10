@@ -1,5 +1,7 @@
 
-const API_URL = import.meta.env.VITE_API_URL;
+const API_URL =
+  import.meta.env.VITE_API_URL ||
+  "https://m01067827-after-school.onrender.com";
 
 export const createOrder = async (orderData) => {
   try {
